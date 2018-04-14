@@ -1,3 +1,3 @@
-import SATMath from './math';
+import * as SATMath from './math';
 
 export {SATMath};

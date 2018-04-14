@@ -223,7 +223,7 @@
                     yMax = point['y'];
                 };
             };
-            return new Box(this["pos"].clone().add(new Vector(xMin, yMin)), xMax - xMin, yMax - yMin);
+            return new Box(this["pos"].clone().add(new Vector(xMin, yMin)), xMax - xMin, yMax - yMin).toPolygon();
         };
 
         // Compute the centroid (geometric center) of the polygon. Any current state
