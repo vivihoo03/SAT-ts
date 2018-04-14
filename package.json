@@ -4,7 +4,8 @@
   "description": "2d collision",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack --display-modules",
+    "dev": "webpack -w --display-modules --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   },
   "homepage": "https://github.com/vivihoo03/SAT-ts#readme",
   "devDependencies": {
-    "awesome-typescript-loader": "*",
+    "awesome-typescript-loader": "^4.0.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-es2015-spread": "^6.22.0",
@@ -32,6 +33,6 @@
     "ts-loader": "*",
     "typescript": "*",
     "uglify-js": "*",
-    "webpack": "*"
+    "webpack": "^2.4.1"
   }
 }

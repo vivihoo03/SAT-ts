@@ -1,15 +1,14 @@
 {
-    "compileOnSave": true,
+    "compileOnSave": true, // 可以让IDE在保存文件的时候根据tsconfig.json重新生成文件
     "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
         "target": "es2017",
-        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
-        "experimentalDecorators": true,
         "moduleResolution": "node",
+        "lib": [ "es7", "dom" ],
         "outDir": "./lib",
-        "sourceMap": true
+        "sourceMap": true //生成相应的map文件
     },
     "exclude": [
         "node_modules"
@@ -17,4 +16,5 @@
     "include": [
         "src/**/*"
     ]
-  }
+}
+
