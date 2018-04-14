@@ -1,3 +1,3 @@
-import Vector from './math/vector';
+import SATMath from './math';
 
-export {Vector};
+export {SATMath};
