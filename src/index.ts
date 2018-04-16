@@ -1,3 +1,8 @@
-import * as SATMath from './math';
+import {Box, Vector, Circle, Polygon}from './math';
+import Response from './collision/response';
 
-export {SATMath};
+export {Box};
+export {Vector};
+export {Circle};
+export {Polygon};
+export {Response};

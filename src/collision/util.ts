@@ -147,3 +147,17 @@ export function isSeparatingAxis(aPos:Vector, bPos: Vector, aPoints:Array<Vector
     T_ARRAYS.push(rangeB);
     return false;
 };
+
+// Calculates which Voronoi region a point is on a line segment.
+// It is assumed that both the line and the point are relative to `(0,0)`
+//
+//            |       (0)      |
+//     (-1)  [S]--------------[E]  (1)
+//            |       (0)      |
+/**
+ * @param {Vector} line The line segment.
+ * @param {Vector} point The point.
+ * @return  {number} LEFT_VORONOI_REGION (-1) if it is the left region,
+ *          MIDDLE_VORONOI_REGION (0) if it is the middle region,
+ *          RIGHT_VORONOI_REGION (1) if it is the right region.
+ */
