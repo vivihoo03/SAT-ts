@@ -1,3 +1,5 @@
+import { Vector } from "../math/index";
+
 export default class Response{
     // ## Response
     //
@@ -10,4 +12,33 @@ export default class Response{
     /**
      * @constructor
      */
+    constructor(){
+        this.a = null;
+        this.b = null;
+        this.overlapN = new Vector();
+        this.overlapV = new Vector();
+        this.clear();
+    };
+
+    a: any;
+
+    b: any;
+
+    overlapN: Vector;
+
+    overlapV: Vector;
+
+    aInB: boolean;
+
+    bInA: boolean;
+
+    overlap: number;
+
+    clear(){
+        this.aInB = true;
+
+        this.bInA = true;
+
+        this.overlap = Number.MAX_VALUE;
+    };
 }
