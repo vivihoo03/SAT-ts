@@ -250,8 +250,8 @@
                 let p2 = i === len - 1 ? points[0] : points[i+1];
 
                 var a = p1['x'] *p2['y'] - p1['y']*p2['x'];
-                cx = (p1['x'] + p2['x']) * a;
-                cy = (p1['y'] + p2['y']) * a;
+                cx += (p1['x'] + p2['x']) * a;
+                cy += (p1['y'] + p2['y']) * a;
                 ar += a;
             };
 
