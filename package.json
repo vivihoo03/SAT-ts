@@ -2,7 +2,7 @@
   "name": "sat-ts",
   "version": "1.0.0",
   "description": "2d collision",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "webpack": "webpack --display-modules",
     "dev": "webpack -w --display-modules --config ./webpack.config.js"

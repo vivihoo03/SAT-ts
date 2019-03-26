@@ -2,6 +2,7 @@ var path = require('path');
 let webpack = require('webpack');
 
 module.exports = {
+    devtool: 'source-map',
     entry: {
         view:'./src/index.ts'
     },
