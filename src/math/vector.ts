@@ -38,7 +38,7 @@ export default class Vector{
   perp():Vector{
       var x = this.x;
       this.x = this.y;
-      this.y = x;
+      this.y = -x;
       return this;
   }
 
