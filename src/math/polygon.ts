@@ -217,7 +217,8 @@
                     xMin = point['x'];
                 } else if(point['x']>xMax){
                     xMax = point['x'];
-                } else if(point['y']<yMin){
+                } 
+                if(point['y']<yMin){
                     yMin = point['y'];
                 } else if(point['y']>yMax){
                     yMax = point['y'];
@@ -250,7 +251,8 @@
                     xMin = point['x'];
                 } else if(point['x']>xMax){
                     xMax = point['x'];
-                } else if(point['y']<yMin){
+                } 
+                if(point['y']<yMin){
                     yMin = point['y'];
                 } else if(point['y']>yMax){
                     yMax = point['y'];
