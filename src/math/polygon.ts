@@ -225,6 +225,39 @@
             };
             return new Box(this["pos"].clone().add(new Vector(xMin, yMin)), xMax - xMin, yMax - yMin).toPolygon();
         };
+     
+        // Compute the axis-aligned bounding box. Any current state
+        // (translations/rotations) will be applied before constructing the AABB.
+        //
+        // Note: Returns a _new_ `Box` each time you call this.
+        /**
+         * @return {Box} The AABB
+         */
+        getAABBBox():Box{
+            let points = this.calcPoints;
+
+            let len = points.length;
+
+            let xMin = points[0]['x'];
+            let yMin = points[0]['y'];
+            let xMax = xMin;
+            let yMax = yMin;
+
+            for(var i =1; i<len; i++){
+                let point = points[i];
+
+                if(point['x']<xMin){
+                    xMin = point['x'];
+                } else if(point['x']>xMax){
+                    xMax = point['x'];
+                } else if(point['y']<yMin){
+                    yMin = point['y'];
+                } else if(point['y']>yMax){
+                    yMax = point['y'];
+                };
+            };
+            return new Box(this["pos"].clone().add(new Vector(xMin, yMin)), xMax - xMin, yMax - yMin);
+        };
 
         // Compute the centroid (geometric center) of the polygon. Any current state
         // (translations/rotations) will be applied before computing the centroid.
