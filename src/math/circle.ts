@@ -36,4 +36,16 @@ export default class Circle{
         let corner = this.pos.clone().sub(new Vector(r,r));
         return new Box(corner, r*2, r*2).toPolygon();
     };
+
+    // Compute the axis-aligned bounding box (AABB) of this Circle.
+    //
+    // Note: Returns a _new_ `Polygon` each time you call this.
+    /**
+     * @return {Polygon} The AABB
+     */
+    getAABBBox():Box{
+        let r = this.r;
+        let corner = this.pos.clone().sub(new Vector(r,r));
+        return new Box(corner, r*2, r*2);
+    };
 };
