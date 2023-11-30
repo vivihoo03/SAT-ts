@@ -1,7 +1,6 @@
 import Polygon from "./polygon";
 import Vector from "./vector";
 import Box from "./box";
-import Circle from "./circle";
 
 export function convertBoxToPolygon(box: {pos: {x: number, y: number}, w: number, h: number}){
     return new Polygon(new Vector(box.pos.x, box.pos.y),[

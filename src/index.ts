@@ -1,6 +1,7 @@
 import {Box, Vector, Circle, Polygon}from './math';
 import Response from './collision/response';
 import {testCircleCircle,testPolygonCircle, testPolygonPolygon,testCirclePolygon} from './collision/util';
+import { convertBoxToPolygon, getAABBBox } from './math/conversion';
 
 export {Box};
 export {Vector};
@@ -11,3 +12,5 @@ export {testCircleCircle};
 export {testPolygonCircle};
 export {testPolygonPolygon};
 export {testCirclePolygon};
+export {convertBoxToPolygon};
+export {getAABBBox};
