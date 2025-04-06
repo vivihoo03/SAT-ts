@@ -1,6 +1,8 @@
-import Vector from './vector';
+import Box from './box';
 import Polygon from './polygon';
+import Vector from './vector';
 export default class Circle {
+    type: 'circle';
     pos: Vector;
     r: number;
     /**
@@ -13,4 +15,9 @@ export default class Circle {
      * @return {Polygon} The AABB
      */
     getAABB(): Polygon;
+    /**
+     * @return {Polygon} The AABB
+     */
+    getAABBBox(): Box;
+    toPolygon(): Polygon;
 }

@@ -5,8 +5,10 @@
  *   in counter-clockwise order.
  * @constructor
  */
+import Box from './box';
 import Vector from './vector';
 export default class Polygon {
+    type: 'polygon';
     pos: Vector;
     angle: number;
     offset: Vector;
@@ -51,7 +53,12 @@ export default class Polygon {
      */
     getAABB(): Polygon;
     /**
+     * @return {Box} The AABB
+     */
+    getAABBBox(): Box;
+    /**
      * @return {Vector} A Vector that contains the coordinates of the Centroid.
      */
     getCentroid(): Vector;
+    toPolygon(): Polygon;
 }

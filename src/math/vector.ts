@@ -38,8 +38,17 @@ export default class Vector{
   perp():Vector{
       var x = this.x;
       this.x = this.y;
-      this.y = x;
+      this.y = -x;
       return this;
+  }
+
+  // Get the cross product between this vector and another
+  /**
+   * @param {Vector} other The vector to cross this one against 
+   * @return {number} Result of the cross product
+   */
+  cross(other:Vector):number{
+    return this.x * other.y - this.y * other.x;
   }
 
   // Rotate this vector (counter-clockwise) by the specified angle (in radians).

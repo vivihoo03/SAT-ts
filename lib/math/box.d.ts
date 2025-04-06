@@ -1,6 +1,7 @@
-import Vector from './vector';
 import Polygon from './polygon';
+import Vector from './vector';
 export default class Box {
+    type: 'box';
     /**
      * @param {Vector=} pos A vector representing the bottom-left of the box (i.e. the smallest x and smallest y value).
      * @param {?number=} w The width of the box.

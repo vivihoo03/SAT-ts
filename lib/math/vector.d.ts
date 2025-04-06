@@ -16,6 +16,11 @@ export default class Vector {
      */
     perp(): Vector;
     /**
+     * @param {Vector} other The vector to cross this one against
+     * @return {number} Result of the cross product
+     */
+    cross(other: Vector): number;
+    /**
      * @param {number} angle The angle to rotate (in radians)
      * @return {Vector} This for chaining.
      */

@@ -1,7 +1,7 @@
-import { Vector } from '../math';
-import Response from './response';
 import { Circle } from '../index';
+import { Vector } from '../math';
 import Polygon from '../math/polygon';
+import Response from './response';
 /**
  * @param {Vector} aPos The position of the first polygon.
  * @param {Vector} bPos The position of the second polygon.
@@ -15,7 +15,7 @@ import Polygon from '../math/polygon';
  *   and a response is passed in, information about how much overlap and
  *   the direction of the overlap will be populated.
  */
-export declare function isSeparatingAxis(aPos: Vector, bPos: Vector, aPoints: Array<Vector>, bPoints: Array<Vector>, axis: Vector, response: Response): boolean;
+export declare function isSeparatingAxis(aPos: Vector, bPos: Vector, aPoints: Array<Vector>, bPoints: Array<Vector>, axis: Vector, response?: Response): boolean;
 /**
  * @param {Vector} p The point to test.
  * @param {Circle} c The circle to test.
@@ -29,7 +29,7 @@ export declare function pointInCircle(p: Vector, c: Circle): boolean;
  *   they interset.
  * @return {boolean} true if they intersect, false if they don't.
  */
-export declare function testPolygonPolygon(a: Polygon, b: Polygon, response: Response): boolean;
+export declare function testPolygonPolygon(a: Polygon, b: Polygon, response?: Response): boolean;
 /**
  * @param {Vector} p The point to test.
  * @param {Polygon} poly The polygon to test.
@@ -43,7 +43,7 @@ export declare function pointInPolygon(p: Vector, poly: Polygon): boolean;
  *   the circles intersect.
  * @return {boolean} true if the circles intersect, false if they don't.
  */
-export declare function testCircleCircle(a: Circle, b: Circle, response: Response): boolean;
+export declare function testCircleCircle(a: Circle, b: Circle, response?: Response): boolean;
 /**
  * @param {Polygon} polygon The polygon.
  * @param {Circle} circle The circle.
@@ -51,7 +51,7 @@ export declare function testCircleCircle(a: Circle, b: Circle, response: Respons
  *   they interset.
  * @return {boolean} true if they intersect, false if they don't.
  */
-export declare function testPolygonCircle(polygon: Polygon, circle: Circle, response: Response): boolean;
+export declare function testPolygonCircle(polygon: Polygon, circle: Circle, response?: Response): boolean;
 /**
  * @param {Circle} circle The circle.
  * @param {Polygon} polygon The polygon.
@@ -59,4 +59,4 @@ export declare function testPolygonCircle(polygon: Polygon, circle: Circle, resp
  *   they interset.
  * @return {boolean} true if they intersect, false if they don't.
  */
-export declare function testCirclePolygon(circle: Circle, polygon: Polygon, response: Response): boolean;
+export declare function testCirclePolygon(circle: Circle, polygon: Polygon, response?: Response): boolean;

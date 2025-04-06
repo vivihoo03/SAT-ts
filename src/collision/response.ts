@@ -1,4 +1,4 @@
-import { Vector } from "../math/index";
+import { Box, Circle, Polygon, Vector } from "../math/index";
 
 export default class Response{
     // ## Response
@@ -20,9 +20,9 @@ export default class Response{
         this.clear();
     };
 
-    a: any;
+    a: Polygon | Circle | Box;
 
-    b: any;
+    b: Polygon | Circle | Box;
 
     overlapN: Vector;
 

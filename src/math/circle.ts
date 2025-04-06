@@ -1,8 +1,9 @@
-import Vector from './vector';
 import Box from './box';
 import Polygon from './polygon';
+import Vector from './vector';
 
-export default class Circle{
+export default class Circle {
+    type: 'circle' = 'circle';
     pos: Vector;
 
     r: number;
@@ -36,4 +37,21 @@ export default class Circle{
         let corner = this.pos.clone().sub(new Vector(r,r));
         return new Box(corner, r*2, r*2).toPolygon();
     };
+
+    // Compute the axis-aligned bounding box (AABB) of this Circle.
+    //
+    // Note: Returns a _new_ `Polygon` each time you call this.
+    /**
+     * @return {Polygon} The AABB
+     */
+    getAABBBox():Box{
+        let r = this.r;
+        let corner = this.pos.clone().sub(new Vector(r,r));
+        return new Box(corner, r*2, r*2);
+    };
+
+    // dummy function to allow use of any SAT Types easily
+    toPolygon(): Polygon {
+        return this.getAABB();
+    }
 };

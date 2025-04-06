@@ -1,5 +1,5 @@
-    import Vector from './vector';
     import Polygon from './polygon';
+import Vector from './vector';
     // ## Box
     //
     // Represents an axis-aligned box, with a width and height.
@@ -9,6 +9,7 @@
     // is given, the position will be `(0,0)`. If no width or height are given, they will
     // be set to `0`.
     export default class Box {
+        type: 'box' = 'box';
         
     /**
      * @param {Vector=} pos A vector representing the bottom-left of the box (i.e. the smallest x and smallest y value).
